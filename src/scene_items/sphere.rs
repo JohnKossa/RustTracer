@@ -1,4 +1,5 @@
+use geometry::point::Point;
 pub struct Sphere{
-    position: Point,
-    radius: i32
+    pub position: Point,
+    pub radius: i32
 }

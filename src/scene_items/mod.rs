@@ -1,8 +1,8 @@
-mod color;
-use color::*;
-mod light;
-use light::*;
-mod material;
-use material::*;
-mod sphere;
-use sphere::*;
+pub mod color;
+use self::color::*;
+pub mod light;
+use self::light::*;
+pub mod material;
+use self::material::*;
+pub mod sphere;
+use self::sphere::*;
