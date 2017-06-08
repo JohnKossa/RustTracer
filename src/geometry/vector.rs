@@ -26,7 +26,7 @@ impl Vector{
         (self.x * other.x) + (self.y * other.y) + (self.z * other.z)
     }
 
-    pub fn scale(self, factor: f32) -> Vector {
-        Vector{x: (self.x as f32 * factor) as i32, y: (self.y as f32 * factor) as i32, z: (self.z as f32 * factor) as i32}
+    pub fn scale(self, factor: f64) -> Vector {
+        Vector{x: (self.x as f64 * factor) as i32, y: (self.y as f64 * factor) as i32, z: (self.z as f64 * factor) as i32}
     }
 }
