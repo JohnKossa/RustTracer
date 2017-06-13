@@ -57,7 +57,7 @@ pub fn draw_scene(scene: Scene) -> Vec<Vec<Color>> {
                 if current_sphere == -1{
                     break;
                 }
-                let mut new_start = view_ray.start.add_vector(view_ray.direction.scale(t));
+                let new_start = view_ray.start.add_vector(view_ray.direction.scale(t));
                 let mut normal = new_start.subtract_point(scene.spheres[current_sphere as usize].position);
                 let mut temp = normal.dot(normal);
                 if temp == 0.0 {
@@ -65,7 +65,7 @@ pub fn draw_scene(scene: Scene) -> Vec<Vec<Color>> {
                 }
                 temp = 1.0/temp.sqrt();
                 normal = normal.scale(temp);
-                let mut current_material = scene.spheres[current_sphere as usize].material;
+                let current_material = scene.spheres[current_sphere as usize].material;
                 for light in scene.lights.iter() {
                     let dist = (*light).position.subtract_point(new_start);
                     if normal.dot(dist) <= 0.0{
