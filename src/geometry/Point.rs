@@ -1,16 +1,17 @@
 use geometry::vector::Vector;
+#[derive(Debug, Copy, Clone)]
 pub struct Point{
-    x: i32,
-    y: i32,
-    z: i32
+    pub x: f64,
+    pub y: f64,
+    pub z: f64
 }
 
 impl Point{
     pub fn origin() -> Point {
-        Point {x:0, y:0, z:0}
+        Point {x:0.0, y:0.0, z:0.0}
     }
 
-    pub fn new(x: i32, y: i32, z: i32) -> Point {
+    pub fn new(x: f64, y: f64, z: f64) -> Point {
         Point{x: x, y: y, z: z}
     }
 

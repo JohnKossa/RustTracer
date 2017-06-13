@@ -1,6 +1,7 @@
 use scene_items::color::Color;
+#[derive(Debug, Copy, Clone)]
 pub struct Material{
-    reflection: f64,
-    color: Color
+    pub reflection: f64,
+    pub color: Color
 }
 
