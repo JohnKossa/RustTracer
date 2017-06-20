@@ -6,3 +6,9 @@ pub struct Sphere{
     pub radius: f64,
     pub material: Material
 }
+
+impl Sphere{
+    pub fn new(pos: Point, radius: f64, material: Material) -> Sphere{
+        Sphere{position: pos, radius: radius, material: material}
+    }
+}

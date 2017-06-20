@@ -2,5 +2,10 @@
 name = "rusttracer"
 version = "0.1.0"
 authors = ["John Kossa <john.kossa@frogslayer.com>"]
+build = "build.rs"
 
-[dependencies]
+[dependencies.gl]
+git = "https://github.com/bjz/gl-rs"
+
+[dependencies.sdl2]
+git = "https://github.com/AngryLawyer/rust-sdl2"

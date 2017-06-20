@@ -33,7 +33,7 @@ pub fn hit_sphere_ray(sphere: Sphere, ray: Ray, t: f64) -> (bool, f64){
 pub fn draw_scene(scene: Scene) -> Vec<Vec<Color>> {
     let mut to_return: Vec<Vec<Color>> = Vec::new();
     for y in 0..scene.size_y {
-        to_return.append(&mut Vec::new());
+        to_return.push(Vec::new());
         for x in 0..scene.size_x {
             let mut red = 0.0;
             let mut green = 0.0;
@@ -96,7 +96,7 @@ pub fn draw_scene(scene: Scene) -> Vec<Vec<Color>> {
             red = red.min(1.0);
             green = green.min(1.0);
             blue = blue.min(1.0);
-            to_return[x][y] = Color {r: red, g: green, b: blue};
+            to_return[y].push(Color {r: red, g: green, b: blue});
         }
     }
     return to_return;

@@ -10,7 +10,7 @@ impl Color{
         Color {r:0.0, g:0.0, b:0.0}
     }
 
-    fn new(r: f64, g: f64, b: f64) -> Color {
+    pub fn new(r: f64, g: f64, b: f64) -> Color {
         Color{r: r, g: g, b: b}
     }
 

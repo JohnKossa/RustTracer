@@ -5,3 +5,8 @@ pub struct Material{
     pub color: Color
 }
 
+impl Material{
+    pub fn new(reflection: f64, color: Color) -> Material{
+        Material{ reflection: reflection, color: color}
+    }
+}
