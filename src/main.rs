@@ -18,18 +18,17 @@ use scene_items::material::Material;
 
 fn build_scene() -> Scene{
     let mut my_scene = Scene{size_x: 800, size_y: 600, spheres: Vec::new(), lights: Vec::new()};
-    my_scene.spheres.push(Sphere::new(Point::new(100.0, 500.0, 0.0), 100.0, Material::new(0.95, Color::new(0.3, 0.0, 0.3))));
-    my_scene.spheres.push(Sphere::new(Point::new(500.0, 500.0, 0.0), 100.0, Material::new(0.95, Color::new(0.0, 0.3, 0.0))));
-    my_scene.spheres.push(Sphere::new(Point::new(100.0, 100.0, 0.0), 100.0, Material::new(0.95, Color::new(0.0, 0.0, 0.3))));
-    my_scene.spheres.push(Sphere::new(Point::new(500.0, 100.0, 0.0), 100.0, Material::new(0.95, Color::new(0.3, 0.3, 0.0))));
-    my_scene.spheres.push(Sphere::new(Point::new(300.0, 300.0, 100.0), 100.0, Material::new(0.0, Color::new(1.0, 1.0, 1.0))));
+    my_scene.spheres.push(Sphere::new(Point::new(100.0, 500.0, 0.0), 100.0, Material::new(0.95, Color::MAGENTA().scale(0.3))));
+    my_scene.spheres.push(Sphere::new(Point::new(500.0, 500.0, 0.0), 100.0, Material::new(0.95, Color::GREEN().scale(0.3))));
+    my_scene.spheres.push(Sphere::new(Point::new(100.0, 100.0, 0.0), 100.0, Material::new(0.95, Color::BLUE().scale(0.3))));
+    my_scene.spheres.push(Sphere::new(Point::new(500.0, 100.0, 0.0), 100.0, Material::new(0.95, Color::YELLOW().scale(0.3))));
+    my_scene.spheres.push(Sphere::new(Point::new(300.0, 300.0, 100.0), 100.0, Material::new(0.0, Color::WHITE())));
     my_scene.lights.push(Light::new(Point::new(500.0, -1000.0, -100.0), Color::new(0.9, 0.5, 0.5)));
     my_scene.lights.push(Light::new(Point::new(640.0, 240.0, -10000.0), Color::new(0.5, 0.5, 0.9)));
     my_scene
 }
 
 fn main() {
-    //TODO Create and render the scene
     let my_scene = build_scene();
     let my_colors = draw_scene(my_scene);
     let sdl_context = sdl2::init().unwrap();
